@@ -5,7 +5,6 @@ import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
 import { useColorScheme, Image, TouchableOpacity, View } from 'react-native';
 import Icon from '@expo/vector-icons/Feather'
-import HeaderComponent from '../components/header';
 
 export {
   // Catch any errors thrown by the Layout component.

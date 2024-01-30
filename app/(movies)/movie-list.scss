@@ -1,0 +1,6 @@
+@import '../../constants/Colors.scss';
+
+.scrollView {
+ background-color: $secondary;
+ height: calc(100vh - 64px);
+}

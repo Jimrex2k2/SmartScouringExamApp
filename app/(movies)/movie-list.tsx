@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 import CardsList from '../../components/card/card'
+import styles from './movie-list.scss'
 
 const MovieList = () => {
   return (
-    <ScrollView style={{backgroundColor: '#222222' }}>
+    <ScrollView style={styles.scrollView}>
       <CardsList></CardsList>
     </ScrollView>
   );

@@ -7,10 +7,9 @@ const styles = StyleSheet.create({
       backgroundColor: 'transparent',
       borderRadius: 5,
       marginVertical: 10,
-      elevation: 2,
-      flexBasis: 150,
-      flexGrow: 2,
-      margin: 5
+      margin: 5,
+      maxWidth: 150,
+      flexGrow: 1
     },
     cardImage: {
       width: '100%',
@@ -34,7 +33,7 @@ const styles = StyleSheet.create({
     cardContainer: {
       flexDirection: 'row',
       flexWrap: 'wrap',
-      justifyContent: 'space-around',
+      alignSelf: 'flex-start',
     },
   });
 
