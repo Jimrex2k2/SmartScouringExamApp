@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ScrollView } from 'react-native';
-import CardsList from '../../components/card/card'
+import CardsList from '../../components/card/cardlist'
 import styles from './movie-list.scss'
 
 const MovieList = () => {

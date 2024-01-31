@@ -1,41 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { router } from 'expo-router';
-
-const styles = StyleSheet.create({
-    card: {
-      backgroundColor: 'transparent',
-      borderRadius: 5,
-      marginVertical: 10,
-      margin: 5,
-      maxWidth: 150,
-      flexGrow: 1
-    },
-    cardImage: {
-      width: '100%',
-      height: 200,
-      resizeMode: 'cover',
-    },
-    cardContent: {
-      paddingHorizontal: 5,
-      color: '#fff'
-    },
-    cardTitle: {
-      color: '#f0ffff',
-      fontSize: 14,
-      fontWeight: 'bold',
-    },
-    cardDescription: {
-      color: '#aaaaaa',
-      fontSize: 9,
-      fontWeight: 'lighter',
-    },
-    cardContainer: {
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      alignSelf: 'flex-start',
-    },
-  });
+import styles from './movie-card.scss';
 
 const Card = ({ id, title, image, description }) => {
   return (
@@ -43,7 +9,7 @@ const Card = ({ id, title, image, description }) => {
     style={styles.card}
     onPress={() => router.push(`movie-detail/${id}`)}
     >
-        <Image source={{ uri: image }} style={styles.cardImage} />
+        <Image source={require('../../assets/images/sample-poster.png')} style={styles.cardImage} />
         <View style={styles.cardContent}>
             <Text style={styles.cardTitle}>{title}</Text>
             <Text style={styles.cardDescription}>{description}</Text>
@@ -53,79 +19,4 @@ const Card = ({ id, title, image, description }) => {
   );
 };
 
-const cardsData = [
-    {
-        id: 1,
-        title: 'Sample Title',
-        image: '../../assets/images/sample-poster.png',
-        description: 'description'
-    },
-    {
-        id: 2,
-        title: 'Sample Title',
-        image: '../../assets/images/sample-poster.png',
-        description: 'description'
-    },
-    {
-        id: 3,
-        title: 'Sample Title',
-        image: '../../assets/images/sample-poster.png',
-        description: 'description'
-    },
-    {
-        id: 4,
-        title: 'Sample Title',
-        image: '../../assets/images/sample-poster.png',
-        description: 'description'
-    },
-    {
-        id: 5,
-        title: 'Sample Title',
-        image: '../../assets/images/sample-poster.png',
-        description: 'description'
-    },
-    {
-        id: 6,
-        title: 'Sample Title',
-        image: '../../assets/images/sample-poster.png',
-        description: 'description'
-    },
-    {
-        id: 7,
-        title: 'Sample Title',
-        image: '../../assets/images/sample-poster.png',
-        description: 'description'
-    },
-    {
-        id: 8,
-        title: 'Sample Title',
-        image: '../../assets/images/sample-poster.png',
-        description: 'description'
-    },
-    {
-      id: 9,
-      title: 'Sample Title',
-      image: '../../assets/images/sample-poster.png',
-      description: 'description'
-    },
-    {
-      id: 10,
-      title: 'Sample Title',
-      image: '../../assets/images/sample-poster.png',
-      description: 'description'
-    },
-]
-
-const CardList = () => {
-  return (
-    <View style={styles.cardContainer}>
-      {
-        cardsData.map((card) => {
-          return (<Card key={card.id} {...card} />);
-        })
-      }
-    </View>
-  );
-};
-
-export default CardList;
+export default Card;

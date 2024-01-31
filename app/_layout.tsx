@@ -55,10 +55,10 @@ function RootLayoutNav() {
             headerStyle: {
               backgroundColor: '#000',
             },
-            headerTitle: () => null, // Remove default title
+            headerTitle: () => null,
             headerLeft: () => (
               <Image
-                source={require('../assets/images/logo.png')} // Replace with your logo path
+                source={require('../assets/images/logo.png')}
                 style={{ width: 30, height: 30, marginLeft: 5 }}
               />
             ),
@@ -69,7 +69,15 @@ function RootLayoutNav() {
             ),
           }}
         />
-        <Stack.Screen name="movieDetail/[id]" />
+        <Stack.Screen 
+          name="movieDetail/[id]"
+          options={{
+            headerTitle: () => null,
+            headerStyle: {
+              backgroundColor: '#000',
+            },
+          }}
+        />
       </Stack>
     </ThemeProvider>
   );
